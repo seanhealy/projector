@@ -1,0 +1,27 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-all --watch src/main.ts",
+    "start": "deno run --allow-all src/main.ts",
+    "compile": "deno compile --allow-all --output dist/projector src/main.ts",
+    "fmt": "deno fmt",
+    "lint": "deno lint",
+    "test": "deno test --allow-all"
+  },
+  "imports": {
+    "@cliffy/command": "jsr:@cliffy/command@^1.0.1"
+  },
+  "fmt": {
+    "lineWidth": 100,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": false
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
+  "compilerOptions": {
+    "strict": true
+  }
+}
