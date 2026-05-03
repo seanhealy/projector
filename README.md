@@ -83,3 +83,14 @@ deno task compile
 ```
 
 The resulting binary embeds the Deno runtime and all dependencies. No Deno install required to run it.
+
+## Releasing
+
+Push a `v*` tag and GitHub Actions will cross-compile binaries for macOS (arm64) and Linux (x64), then publish them to a GitHub Release with auto-generated notes and `SHA256SUMS`.
+
+```sh
+git tag v0.2.0
+git push --tags
+```
+
+The same workflow can be triggered manually from the Actions tab via `workflow_dispatch` with a tag input.
